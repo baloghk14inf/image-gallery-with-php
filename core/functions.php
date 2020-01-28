@@ -130,10 +130,10 @@ function getTotal($connection) {
  */
 function getPhotosPaginated($connection, $size, $offset) {
     $query = "SELECT * FROM photos LIMIT ?, ?";
-    if ($statment = mysqli_prepare($connection, $query)) {
+    if ($statment = mysqli_prepare($connection, $query)) { //előkészítés
         mysqli_stmt_bind_param($statment, "ii", $offset, $size); // itt kerül behelyettesítésre a kérdőjelek helyére a változó ii- integer and integer
-        mysqli_stmt_execute($statment);
-        $result = mysqli_stmt_get_result($statment);
+        mysqli_stmt_execute($statment); //végrehajtás
+        $result = mysqli_stmt_get_result($statment); //eredménymegszerzés
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     } else {
         logMessage("ERROR", 'Query error: ' . mysqli_error($connection));
@@ -171,11 +171,11 @@ function getImageById($connection, $id) {
  * @param   string  $method     Default: "GET"
  * @return  void
  */
-function route($route, $callable, $method = "GET") {
+/*function route($route, $callable, $method = "GET") {
     global $routes;
-    $route = "%^$route$%"; //itt csinál mintát belőle a % -ék a / jel kizárása
+   // $route = "%^$route$%"; //itt csinál mintát belőle a % -ék a / jel kizárása , A helyett nem itt adjuk hozzá hanem akkor amikor kiveszük a tömből.
     $routes[strtoupper($method)][$route] = $callable;
-}
+} */
 
 /**
  * Az aktuális útvonalhoz tartozó kezelő függvény(Controller) kikeresése, meghívása
@@ -188,6 +188,7 @@ function dispatch($actualRoute, $notFound) {
     $method = $_SERVER["REQUEST_METHOD"];   // POST GET PATH DELETE
     if (key_exists($method, $routes)) { //key_exists -van e az adott kulcs(létezik e)
         foreach ($routes[$method] as $route => $callable) {
+            $route = "%^$route$%"; //itt tesszük rá
             if (preg_match($route, $actualRoute, $matches)) { //$matches -kimeneti paraméter
                 return $callable($matches);
             }

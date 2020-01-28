@@ -2,14 +2,14 @@
 
 
 // utvonalak felvétele a $routes tömbbe
-route('/', 'homeController');
+/*route('/', 'homeController');
 route('/about', 'aboutController');
 route('/image/(?<id>[\d]+)', 'singleImageController');
 route('/image/(?<id>[\d]+)/edit', 'singleImageEditController', 'POST');
-route('/image/(?<id>[\d]+)/delete', 'singleImageDeleteController', 'POST');
+route('/image/(?<id>[\d]+)/delete', 'singleImageDeleteController', 'POST'); */
  
 // az utvonal lekérdezése
-$uri = $_SERVER["REQUEST_URI"];
+$uri = $_SERVER["REQUEST_URI"] ?? '/'; //lehet hogy egy nem létező változóra hivatkozunk// '/'- a home-ot jelenti
 $cleaned = explode("?", $uri) [0];
 
 

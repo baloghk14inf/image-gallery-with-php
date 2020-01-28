@@ -39,8 +39,8 @@ function homeController() {
      *   $pageSize = $_GET["size"] ??  10;
      * ami lényegesen tömörebb...
      */
-    $size = $_GET["size"] ?? 10;    // $size: lapozási oldalméret
-    $page = $_GET["page"] ?? 1;     // $page: oldalszám
+    $size = filter_input(INPUT_GET, 'size')?? 10;    // $size: lapozási oldalméret
+    $page = filter_input(INPUT_GET, 'page') ?? 1;     // $page: oldalszám
  
     // $connection: Adatbázis kapcsolat
     global $config;
