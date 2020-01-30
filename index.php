@@ -1,6 +1,7 @@
 <?php
 
     
+    
     require_once "core/functions.php";
     require_once "core/controllers.php";
     require_once "core/config.php"; //alap beállítások helye

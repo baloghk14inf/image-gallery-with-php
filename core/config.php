@@ -26,5 +26,5 @@
 $routes['GET']['/'] = 'homeController';
 $routes['GET']['/about'] = 'aboutController';
 $routes['GET']['/image/(?<id>[\d]+)'] = 'singleImageController';
-$routes['POST']['/image/(?<id>[\d]+)/edit'] = 'singleImageEditController';
+$routes['POST']['/image/(?<id>[\d]+)/edit'] = 'singleImageEditController'; //?<id> -csoport elnevezése
 $routes['POST']['/image/(?<id>[\d]+)/delete'] = 'singleImageDeleteController';
