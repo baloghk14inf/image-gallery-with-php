@@ -2,9 +2,9 @@
 
 
     /**
-     * $title: ide írd az alkalmazás nevét
+     * $siteName: ide írd az alkalmazás nevét
      */
-    $title = "Photo Galery";
+    $siteName = "Photo Galery";
     /**
      * lehetséges oldalméret értékek
      */
