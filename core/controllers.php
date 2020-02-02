@@ -91,3 +91,14 @@ function singleImageController($params)
         ]
         ];
 }
+
+function aboutController()
+{
+    return[
+        'about',
+        [
+            'title' => 'About page'
+        ]
+        ];
+
+}
