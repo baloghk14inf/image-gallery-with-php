@@ -102,3 +102,33 @@ function aboutController()
         ];
 
 }
+
+/**
+ *singleImageEditController- Egy kép szerkesztése
+ *
+ * @return void
+ */
+function singleImageEditController()
+{
+    return [
+        "redirect:/",
+        []
+    ];
+
+
+}
+
+/**
+ * singleImageDeleteController- Egy kép tőrlése
+ *
+ * @return void
+ */
+function singleImageDeleteController()
+{
+    return [
+        "redirect:/",
+        []
+    ];
+
+
+}
