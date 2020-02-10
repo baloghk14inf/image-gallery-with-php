@@ -197,3 +197,26 @@ function dispatch($actualRoute, $notFound) {
     return $notFound();
 }
 
+function updateImage($connection,$id,$title)
+{
+    $query = "UPDATE photos SET title = ? WHERE id = ?";
+    if ($statment = mysqli_prepare($connection, $query)) {
+        mysqli_stmt_bind_param($statment, "si", $title, $id); //bind-hozzákötés "i"-integer 
+        mysqli_stmt_execute($statment);
+    } else {
+        logMessage("ERROR", 'Query error: ' . mysqli_error($connection));
+        errorPage();
+    }  
+}
+
+function deleteImage($connection,$id)
+{
+    $query = "DELETE FROM photos WHERE id = ?";
+    if ($statment = mysqli_prepare($connection, $query)) {
+        mysqli_stmt_bind_param($statment, "i",$id); //bind-hozzákötés "i"-integer 
+        mysqli_stmt_execute($statment);
+    } else {
+        logMessage("ERROR", 'Query error: ' . mysqli_error($connection));
+        errorPage();
+    }  
+}

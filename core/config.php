@@ -27,4 +27,4 @@ $routes['GET']['/'] = 'homeController';
 $routes['GET']['/about'] = 'aboutController'; //about route létrehozása , már előre létre volt hozva
 $routes['GET']['/image/(?<id>[\d]+)'] = 'singleImageController';
 $routes['POST']['/image/(?<id>[\d]+)/edit'] = 'singleImageEditController'; //?<id> -csoport elnevezése
-$routes['POST']['/image/(?<id>[\d]+)/delete'] = 'singleImageDeleteController';
+$routes['POST']['/image/(?<id>[\d]+)/delete'] = 'singleImageDeleteController';// delete rout-ot már létrehoztuk órán
