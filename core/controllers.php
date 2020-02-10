@@ -108,10 +108,17 @@ function aboutController()
  *
  * @return void
  */
-function singleImageEditController()
+function singleImageEditController($params)
 {
+   $connection = getConnection();
+   $id = $params['id']; //itt vesszük át az id-t
+   $title = $_POST['title'];
+
+   updateImage($connection,$id,$title);
+
+   
     return [
-        "redirect:/",
+        "redirect:/image/$id", //ugyan ide irányít vissza
         []
     ];
 

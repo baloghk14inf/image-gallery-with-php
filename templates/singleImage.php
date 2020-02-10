@@ -9,12 +9,12 @@
             <form method="post" action="/image/<?=$picture['id']?>/edit">
                 <div class="form-group">
                     <label for="title">Title: </label>
-                    <input type="text" id="title" value="<?=$picture['title']?>" class="form-control" placeholder="Enter the title here.">
+                    <input type="text" id="title" name="title" value="<?=$picture['title']?>" class="form-control" placeholder="Enter the title here.">
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
  
-            <form method="post" action="/image/<?=$picture['id']?>/delete" class="mt-5">
+            <form method="post"  action="/image/<?=$picture['id']?>/delete" class="mt-5">
                 <div class="form-group">
                     <label for="title">Danger zone</label>
                 </div>
