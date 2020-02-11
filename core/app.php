@@ -22,7 +22,7 @@ if (preg_match("%^redirect\:(?<route>.*)$%", $view, $matches)) {
   header('Location:' . $redirectTarget);
   die();
 }
-extract($data); // ez beleteszi eggyesével külön változóba a kulcs értékét
+extract($data);
 
 
 
