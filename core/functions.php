@@ -220,3 +220,38 @@ function deleteImage($connection,$id)
         errorPage();
     }  
 }
+
+/**
+ * Felhasználó létrehozása
+ *
+ * @return void
+ */
+function createUser()
+{
+    $loggedIn = array_key_exists('user', $_SESSION);
+
+    return [
+        'loggedIn' => $loggedIn,
+        'name'=> $loggedIn ? $_SESSION['user']['name'] :null
+    ];
+}
+
+function loginUser($connection, $email, $password)
+{
+    $query = "SELECT name, password FROM photos_users WHERE email = ?";
+    if ($statment = mysqli_prepare($connection, $query)) {
+        mysqli_stmt_bind_param($statment, "s", $email); //bind-hozzákötés"s"-string
+        mysqli_stmt_execute($statment);
+        $result = mysqli_stmt_get_result($statment);
+        $record = mysqli_fetch_assoc($result);
+        if ($record != null && password_verify($password, $record['password'])) {
+            return $record;
+        }
+        else {
+            return null;
+        }
+    } else {
+        logMessage("ERROR", 'Query error: ' . mysqli_error($connection));
+        errorPage();
+    }
+}

@@ -17,11 +17,15 @@ $cleaned = explode("?", $uri) [0];
 
 list($view, $data) = dispatch($cleaned, 'notFoundController');
 
-if (preg_match("%^redirect\:(?<route>.*)$%", $view, $matches)) {
+if (preg_match("%^redirect\:(?<route>.*)$%", $view, $matches)) {//i tt történik meg majd az átirányítás
   $redirectTarget = $matches['route'];
   header('Location:' . $redirectTarget);
   die();
 }
+
+$user = createUser();
+
+
 extract($data);
 
 

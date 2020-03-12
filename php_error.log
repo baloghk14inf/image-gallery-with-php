@@ -1,0 +1,54 @@
+[12-Mar-2020 10:03:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function loginFormController() in H:\WEB\image-gallery-with-php\core\functions.php:193
+Stack trace:
+#0 H:\WEB\image-gallery-with-php\core\app.php(18): dispatch('/login', 'notFoundControl...')
+#1 H:\WEB\image-gallery-with-php\index.php(12): require_once('H:\\WEB\\image-ga...')
+#2 {main}
+  thrown in H:\WEB\image-gallery-with-php\core\functions.php on line 193
+[12-Mar-2020 10:09:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function loginFormController() in H:\WEB\image-gallery-with-php\core\functions.php:193
+Stack trace:
+#0 H:\WEB\image-gallery-with-php\core\app.php(18): dispatch('/login', 'notFoundControl...')
+#1 H:\WEB\image-gallery-with-php\index.php(12): require_once('H:\\WEB\\image-ga...')
+#2 {main}
+  thrown in H:\WEB\image-gallery-with-php\core\functions.php on line 193
+[12-Mar-2020 10:10:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function loginFormController() in H:\WEB\image-gallery-with-php\core\functions.php:193
+Stack trace:
+#0 H:\WEB\image-gallery-with-php\core\app.php(18): dispatch('/login', 'notFoundControl...')
+#1 H:\WEB\image-gallery-with-php\index.php(12): require_once('H:\\WEB\\image-ga...')
+#2 {main}
+  thrown in H:\WEB\image-gallery-with-php\core\functions.php on line 193
+[12-Mar-2020 11:45:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function loginFormController() in H:\WEB\image-gallery-with-php\core\functions.php:193
+Stack trace:
+#0 H:\WEB\image-gallery-with-php\core\app.php(18): dispatch('/login', 'notFoundControl...')
+#1 H:\WEB\image-gallery-with-php\index.php(12): require_once('H:\\WEB\\image-ga...')
+#2 {main}
+  thrown in H:\WEB\image-gallery-with-php\core\functions.php on line 193
+[12-Mar-2020 12:11:08 UTC] PHP Notice:  Undefined index: email in H:\WEB\image-gallery-with-php\core\controllers.php on line 191
+[12-Mar-2020 12:11:08 UTC] PHP Stack trace:
+[12-Mar-2020 12:11:08 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:11:08 UTC] PHP   2. require_once() H:\WEB\image-gallery-with-php\index.php:12
+[12-Mar-2020 12:11:08 UTC] PHP   3. dispatch() H:\WEB\image-gallery-with-php\core\app.php:18
+[12-Mar-2020 12:11:08 UTC] PHP   4. loginSubmitController() H:\WEB\image-gallery-with-php\core\functions.php:193
+[12-Mar-2020 12:16:15 UTC] PHP Fatal error:  Cannot use [] for reading in H:\WEB\image-gallery-with-php\core\controllers.php on line 210
+[12-Mar-2020 12:16:15 UTC] PHP Stack trace:
+[12-Mar-2020 12:16:15 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:16:15 UTC] PHP Fatal error:  Cannot use [] for reading in H:\WEB\image-gallery-with-php\core\controllers.php on line 210
+[12-Mar-2020 12:16:15 UTC] PHP Stack trace:
+[12-Mar-2020 12:16:15 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:16:22 UTC] PHP Fatal error:  Cannot use [] for reading in H:\WEB\image-gallery-with-php\core\controllers.php on line 210
+[12-Mar-2020 12:16:22 UTC] PHP Stack trace:
+[12-Mar-2020 12:16:22 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:16:22 UTC] PHP Fatal error:  Cannot use [] for reading in H:\WEB\image-gallery-with-php\core\controllers.php on line 210
+[12-Mar-2020 12:16:22 UTC] PHP Stack trace:
+[12-Mar-2020 12:16:22 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:16:23 UTC] PHP Fatal error:  Cannot use [] for reading in H:\WEB\image-gallery-with-php\core\controllers.php on line 210
+[12-Mar-2020 12:16:23 UTC] PHP Stack trace:
+[12-Mar-2020 12:16:23 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:16:23 UTC] PHP Fatal error:  Cannot use [] for reading in H:\WEB\image-gallery-with-php\core\controllers.php on line 210
+[12-Mar-2020 12:16:23 UTC] PHP Stack trace:
+[12-Mar-2020 12:16:23 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:18:45 UTC] PHP Notice:  Undefined index: email in H:\WEB\image-gallery-with-php\core\controllers.php on line 191
+[12-Mar-2020 12:18:45 UTC] PHP Stack trace:
+[12-Mar-2020 12:18:45 UTC] PHP   1. {main}() H:\WEB\image-gallery-with-php\index.php:0
+[12-Mar-2020 12:18:45 UTC] PHP   2. require_once() H:\WEB\image-gallery-with-php\index.php:12
+[12-Mar-2020 12:18:45 UTC] PHP   3. dispatch() H:\WEB\image-gallery-with-php\core\app.php:18
+[12-Mar-2020 12:18:45 UTC] PHP   4. loginSubmitController() H:\WEB\image-gallery-with-php\core\functions.php:193
